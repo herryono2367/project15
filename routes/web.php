@@ -45,4 +45,13 @@ Route::get('/', function () {
 Route::get('/home', function(){
 return view('index');
 });
+Route::get('/kontak/{hp}', function($hp){
+return view('kontak', ['handphone'=>$hp]);
+});
+Route::get('/tentang-kami', function(){
+    return view('tentang');
+});
 
+//crud
+
+Route::get('customer','CustomerController@index');
